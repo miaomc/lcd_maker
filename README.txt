@@ -1,26 +1,29 @@
-Ë¼Â·:
-1. UIÒª×ã¹»¾«¼ò -- Õâ¸ötoC
-2. ÏÈÄÜÓÃÔÙËµ£¬ÄÜ²»¸Ä¾Í²»¸Ä --Ò»¿Ú³Ô²»³ÉÅÖ×Ó
-3. ²ÉÓÃpyinstall½øĞĞexe±àÒë£º pip install PyInstaller -i https://mirrors.aliyun.com/pypi/simple/     pyinstaller -F main.py --noconsole
+å¿«é€Ÿå¯åŠ¨æ–¹æ¡ˆå‘½ä»¤ï¼ˆæ–‡ä»¶å¤¹+æ‰§è¡Œæ–‡ä»¶ï¼‰ï¼š
+D:\Python3\Scripts\pyinstaller.exe --windowed main.py
 
-Ï¸½Ú£º
-0.Ï¸½Ú²Î¿¼£ºLCD±¾µØÅäÖÃÈí¼ş-Éè¼ÆÍ¼
-1.³£Á¿»¹ÊÇ _ ¼ÓÈ«Æ´´óĞ´: CHULIQIMINGCHEN
-2.±äÁ¿ÓÃÍÕ·å£¬Ê×Ğ´Ğ¡Ğ´£¬ºóÃæÊ××ÖÄ¸´óĞ´: lastOwnId
+æ€è·¯:
+1. UIè¦è¶³å¤Ÿç²¾ç®€ -- è¿™ä¸ªtoC
+2. å…ˆèƒ½ç”¨å†è¯´ï¼Œèƒ½ä¸æ”¹å°±ä¸æ”¹ --ä¸€å£åƒä¸æˆèƒ–å­
+3. é‡‡ç”¨pyinstallè¿›è¡Œexeç¼–è¯‘ï¼š pip install PyInstaller -i https://mirrors.aliyun.com/pypi/simple/     pyinstaller -F main.py --noconsole
 
-²½Öè£º
+ç»†èŠ‚ï¼š
+0.ç»†èŠ‚å‚è€ƒï¼šLCDæœ¬åœ°é…ç½®è½¯ä»¶-è®¾è®¡å›¾
+1.å¸¸é‡è¿˜æ˜¯ _ åŠ å…¨æ‹¼å¤§å†™: CHULIQIMINGCHEN
+2.å˜é‡ç”¨é©¼å³°ï¼Œé¦–å†™å°å†™ï¼Œåé¢é¦–å­—æ¯å¤§å†™: lastOwnId
+
+æ­¥éª¤ï¼š
 mainFrame.py
-1.ÖÆ×÷UI(²ÉÓÃTkinter)£¬´ò¿ªÊı¾İ£¬ÌîĞ´ÊıÖµ£¬µã»÷Éú³É
-2. ²Î¿¼£ºhttps://zhuanlan.zhihu.com/p/75872830
+1.åˆ¶ä½œUI(é‡‡ç”¨Tkinter)ï¼Œæ‰“å¼€æ•°æ®ï¼Œå¡«å†™æ•°å€¼ï¼Œç‚¹å‡»ç”Ÿæˆ
+2. å‚è€ƒï¼šhttps://zhuanlan.zhihu.com/p/75872830
 https://wenku.csdn.net/answer/e5174f80be314b22b5bfbef2ee3c2994
 lcdMaker.py
-0.ÓÃexcel_maker²Ö¿â
-1.¸´ÖÆÄ£°å±í¸ñ
-2.ËÑË÷¹Ø¼ü×Ö½øĞĞÌæ»»£¬¹Ø¼ü×ÖÓÃÆ´Òô´óĞ´
-3.¼ÆËãÂß¼­£¬Ìæ»»²¿·ÖÊı¾İ£¬»º´æµ½±äÁ¿£¨dict£©
-4.µã»÷Éú³É£¬´´½¨ÎÄ¼ş£¬»º´æÌæ»»Êı¾İĞ´Èë£¬¹Ø±ÕÎÄ¼ş
+0.ç”¨excel_makerä»“åº“
+1.å¤åˆ¶æ¨¡æ¿è¡¨æ ¼
+2.æœç´¢å…³é”®å­—è¿›è¡Œæ›¿æ¢ï¼Œå…³é”®å­—ç”¨æ‹¼éŸ³å¤§å†™
+3.è®¡ç®—é€»è¾‘ï¼Œæ›¿æ¢éƒ¨åˆ†æ•°æ®ï¼Œç¼“å­˜åˆ°å˜é‡ï¼ˆdictï¼‰
+4.ç‚¹å‡»ç”Ÿæˆï¼Œåˆ›å»ºæ–‡ä»¶ï¼Œç¼“å­˜æ›¿æ¢æ•°æ®å†™å…¥ï¼Œå…³é—­æ–‡ä»¶
 
-Èë¿Ú:
+å…¥å£:
 1. main.py
 2. main_frame.py
 3. excel.py
@@ -29,8 +32,8 @@ lcdMaker.py
 
 P.S.
 0. pip install openpyxl
-1. ĞŞ¸ÄÔ´
+1. ä¿®æ”¹æº
 pip install python-docx -i https://mirrors.aliyun.com/pypi/simple/
-2. ×¢ÒâÊÇpyinstaller¶ø²»ÊÇpyinstall
+2. æ³¨æ„æ˜¯pyinstallerè€Œä¸æ˜¯pyinstall
 pip install PyInstaller -i https://mirrors.aliyun.com/pypi/simple/
 pyinstaller -F main.py --noconsole
