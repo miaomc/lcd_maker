@@ -17,7 +17,7 @@ def main():
 
     # 工具标题
     mainframe = tk.Tk()
-    mainframe.title(u'一键LCD配单生成工具V1.0')
+    mainframe.title(u'一键LCD配单生成工具V1.2')
 
     # 内容
     """
@@ -33,7 +33,7 @@ def main():
     """
 
     # 输入参数:argument
-    argumentDict = {'XIANGMUMINGCHENG':u'项目名称',
+    argumentDict = {
                    'HANG':u'行',
                    'LIE':u'列',
                    }
@@ -59,21 +59,18 @@ def main():
         else:
             label = tk.Label(mainframe,text=rowDict[i]+' :')
         label.grid(row=n,sticky=tk.E) #靠东
-        if i == "XIANGMUMINGCHENG":
-            content = tk.Entry(mainframe, width=48)
+        content = ttk.Combobox(mainframe,width=45)
+        if i in ["HANG","LIE"]:
+            content['value'] = [ind for ind in range(1,15)]
         else:
-            content = ttk.Combobox(mainframe,width=45)
-            if i in ["HANG","LIE"]:
-                content['value'] = [ind for ind in range(1,15)]
-            else:
-                content['value'] = contentFileDict[i]
-            content.current(0)
+            content['value'] = contentFileDict[i]
+        content.current(0)
         itemDict[i] = content
         content.grid(row=n,column=1)    
 
     # 获取信息
-    if not itemDict['XIANGMUMINGCHENG'].get():
-        itemDict['XIANGMUMINGCHENG'].insert(0,'液晶拼接屏清单-宇视'+datetime.now().strftime('%Y%m%d%H%M%S'))
+    # if not itemDict['XIANGMUMINGCHENG'].get():
+    #    itemDict['XIANGMUMINGCHENG'].insert(0,'宇视拼接屏清单-'+datetime.now().strftime('%Y%m%d%H%M%S'))
         # print(itemDict['XIANGMUMINGCHENG'].get())
     
     
@@ -103,7 +100,9 @@ def main():
         replaceDict["SHULIANG"] = int(keyDict["HANG"]) * int(keyDict["LIE"])
         
         # 生成Excel文件
-        newFileName = itemDict['XIANGMUMINGCHENG'].get()+'.xlsx'
+        #print(keyDict['HANG'],keyDict['LIE'],keyDict['DAPING'].split("mm")[0])
+        #print(type(keyDict['HANG']))
+        newFileName = '宇视清单%sx%s-%s-'%(keyDict['HANG'],keyDict['LIE'],keyDict['DAPING'].split("mm")[0])+datetime.now().strftime('%Y%m%d%H%M%S')+'.xlsx' #itemDict['XIANGMUMINGCHENG'].get()+'.xlsx'
         excel.copyExcel(originFileName, newFileName, replaceDict)
         
         
